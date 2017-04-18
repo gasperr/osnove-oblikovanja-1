@@ -32,6 +32,7 @@ function drawRect(coOrdStr)
     right = mCoords[2];
     bot = mCoords[3];
     hdc.strokeRect(left,top,right-left,bot-top); 
+    hdc.fillRect(left,top,right-left,bot-top); 
 }
 
 function myHover(element)
@@ -91,9 +92,9 @@ function myInit()
     hdc = can.getContext('2d');
 
     // set the 'default' values for the colour/width of fill/stroke operations
-    hdc.fillStyle = 'red';
-    hdc.strokeStyle = 'red';
-    hdc.lineWidth = 2;
+    hdc.fillStyle = 'rgba(0,0,0,.2)';
+    hdc.strokeStyle = 'black';
+    hdc.lineWidth = 1;
 }
 
 $(document).ready(function(){
