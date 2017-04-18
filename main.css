@@ -1,0 +1,20 @@
+.body {
+	    height: 100%;
+		    width: 100%;
+    background: #FFF;
+    display: table;
+    position: absolute;
+}
+
+.valign {
+	    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+.align {
+	    vertical-align: middle;
+}
+canvas {
+    pointer-events: none;       /* make the canvas transparent to the mouse - needed since canvas is position infront of image */
+    position: absolute;
+}
