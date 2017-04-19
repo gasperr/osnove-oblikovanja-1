@@ -33,7 +33,19 @@
 					</div>
 					
 					<div style="display: none; text-align: center;" id="room1">
-						<img src="room1.png" style="max-width: 60%;" id="room1_img">
+						<map name="room1_map">
+								<area id="tabla1" alt="Tabla 1" title="Tabla 1" onmouseover='myHover(this);' onmouseout='myLeave("room1_canvas");' shape="poly" coords="438,146,544,89,541,144,438,203" style="outline:none;" target="_self"     />
+								<area id="proj_filma" alt="Projekcija filma" title="Projekcija filma" onmouseover='myHover(this);' onmouseout='myLeave("room1_canvas");' shape="poly" coords="187,318,350,391,350,481,187,409" style="outline:none;" target="_self"     />
+								<area id="tabla_2" alt="Tabla 2" title="Tabla 2" onmouseover='myHover(this);' onmouseout='myLeave("room1_canvas");' shape="poly" coords="680,240,784,183,784,239,681,298" style="outline:none;" target="_self"     />
+								<area id="napis_na_steni" alt="Napis na steni" title="Napis na steni" onmouseover='myHover(this);' onmouseout='myLeave("room1_canvas");' shape="poly" coords="940,492,1134,603,1134,666,940,555" style="outline:none;" target="_self"     />
+								<area id="tv_1" alt="Tv" title="Tv" onmouseover='myHover(this);' onmouseout='myLeave("room1_canvas");' shape="poly" coords="1158,408,1183,391,1212,409,1214,434,1183,449,1157,436" style="outline:none;" target="_self"     />
+								<area id="tv_2" alt="Tv 2" title="Tv 2" onmouseover='myHover(this);' onmouseout='myLeave("room1_canvas");' shape="poly" coords="788,910,814,893,840,909,840,934,812,949,785,934" style="outline:none;" target="_self"     />
+								<area id="vrata_1" alt="Vrata 1" title="Vrata 1" onmouseover='myHover(this);' onmouseout='myLeave("room1_canvas");' shape="poly" coords="307,763,414,825,409,1026,302,967" style="outline:none;" target="_self"     />
+								<area id="vrata_2" alt="Vrata 2" title="Vrata 2" onmouseover='myHover(this);' onmouseout='myLeave("room1_canvas");' shape="poly" coords="632,952,737,1012,730,1214,633,1158" style="outline:none;" target="_self"     />
+								<area id="vrata_3" alt="Vrata 3" title="Vrata 3" onmouseover='myHover(this);' onmouseout='myLeave("room1_canvas");' shape="poly" coords="1183,641,1280,695,1273,880,1180,833" style="outline:none;" target="_self"     />
+						</map>
+						<canvas id='room1_canvas'></canvas>
+						<img src="room1.png" style="max-width: 60%;" usemap="#room1_map" id="room1_img">
 					</div>
 					<div style="display: none; text-align: center;" id="room2">
 						<map name="room2_map">
