@@ -21,6 +21,7 @@ function drawPoly(coOrdStr)
     }
     hdc.lineTo(mCoords[0], mCoords[1]);
     hdc.stroke();
+	hdc.fill();
 }
 
 function drawRect(coOrdStr)
@@ -53,50 +54,62 @@ function myHover(element)
     }
 }
 
-function myLeave()
+function myLeave(canvasId)
 {
-    var canvas = byId('myCanvas');
+    var canvas = byId(canvasId);
     hdc.clearRect(0, 0, canvas.width, canvas.height);
 }
 
-function myInit()
+function myInit(id, hoverColor, canvasId)
 {
-    // get the target image
-    var img = byId('tloris-id');
+	setTimeout(function(){
+		// get the target image
+		var img = byId(id);
 
-    var x,y, w,h;
+		var x,y, w,h;
 
-    // get it's position and width+height
-    x = img.offsetLeft;
-    y = img.offsetTop;
-    w = img.clientWidth;
-    h = img.clientHeight;
+		// get it's position and width+height
+		x = img.offsetLeft;
+		y = img.offsetTop;
+		w = img.clientWidth;
+		h = img.clientHeight;
 
-    // move the canvas, so it's contained by the same parent as the image
-    var imgParent = img.parentNode;
-    var can = byId('myCanvas');
-    imgParent.appendChild(can);
+		// move the canvas, so it's contained by the same parent as the image
+		var imgParent = img.parentNode;
+		var can = byId(canvasId);
+		imgParent.appendChild(can);
 
-    // place the canvas in front of the image
-    can.style.zIndex = 1;
+		// place the canvas in front of the image
+		can.style.zIndex = 1;
 
-    // position it over the image
-    can.style.left = x+'px';
-    can.style.top = y+'px';
+		// position it over the image
+		can.style.left = x+'px';
+		can.style.top = y+'px';
 
-    // make same size as the image
-    can.setAttribute('width', w+'px');
-    can.setAttribute('height', h+'px');
+		// make same size as the image
+		can.setAttribute('width', w+'px');
+		can.setAttribute('height', h+'px');
 
-    // get it's context
-    hdc = can.getContext('2d');
+		// get it's context
+		hdc = can.getContext('2d');
 
-    // set the 'default' values for the colour/width of fill/stroke operations
-    hdc.fillStyle = 'rgba(0,0,0,.2)';
-    hdc.strokeStyle = 'black';
-    hdc.lineWidth = 1;
+		// set the 'default' values for the colour/width of fill/stroke operations
+		hdc.fillStyle = hoverColor;
+		hdc.strokeStyle = 'black';
+		hdc.lineWidth = 1;
+	
+	
+		imageMapResize();
+		
+		$(".fancybox-close-small").on("click", function(){
+			myInit('tloris-id', 'rgba(0,0,0,.2)', 'mainCanvas');
+		})
+	}, 500);
+	
+	
 }
 
+
 $(document).ready(function(){
-	myInit();
+	myInit('tloris-id', 'rgba(0,0,0,.2)', 'mainCanvas');
 });
