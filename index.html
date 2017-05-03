@@ -1,106 +1,70 @@
 <!DOCTYPE html>
 <html style="height:100%;width:100%;overflow:hidden">
-	<head lang="en">
-		<meta charset="UTF-8">
-			<title>Osnove Oblikovanj</title>
-			<link rel="stylesheet" href="main.css" />
-			
-			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Osnove Oblikovanj</title>
+    <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css"/>
 
-		</head>
-		<body class="body">
-		<canvas id='mainCanvas'></canvas>     <!-- gets re-positioned in myInit(); -->
+</head>
+<body class="body">
+<canvas id='mainCanvas'></canvas>     <!-- gets re-positioned in myInit(); -->
 
-			<map name="tloris_map">
-				<area id="room1-area" alt="Room 1" title="Room 1" data-fancybox data-src="#room1" onmouseover='myHover(this);' onclick="myInit('room1_img', 'rgba(0, 0, 0, 0.25)', 'room1_canvas')" onmouseout='myLeave("mainCanvas");' shape="rect" coords="847,424,1110,582" style="outline:none;" target="_blank"     />
-				<area id="room2-area" alt="Room 2" title="Room 2" data-fancybox data-src="#room2" onmouseover='myHover(this);' onclick="myInit('room2_img', 'rgba(0, 0, 0, 0.25)', 'room2_canvas')" onmouseout='myLeave("mainCanvas");' href="http://www.facebook.com/" shape="rect" coords="1125,423,1471,586" style="outline:none;" target="_blank"     />
-				
-				<area id="room3-area" alt="Room 3" data-fancybox data-src="#room3" title="Room 3" onmouseover='myHover(this);' onmouseout='myLeave("mainCanvas");' shape="rect" coords="1210,58,1470,408" style="outline:none;" target="_blank"     />
-				
-<area id="room4-area" alt="Room 4" title="Room 4" data-fancybox data-src="#room4" onmouseover='myHover(this);' onmouseout='myLeave("mainCanvas");' shape="rect" coords="1055,73,1194,316" style="outline:none;" target="_self"     />
-<area id="room5-area" alt="Room 5" title="Room 5" data-fancybox data-src="#room5" onmouseover='myHover(this);' onmouseout='myLeave("mainCanvas");' shape="rect" coords="721,37,1044,210" style="outline:none;" target="_self"     />
-<area id="room6-area" alt="Room 6" title="Room 6" data-fancybox data-src="#room6" onmouseover='myHover(this);' onmouseout='myLeave("mainCanvas");' shape="rect" coords="127,34,685,207" style="outline:none;" target="_self"     />
-<area id="room7-area" alt="Room 7" title="Room 7" data-fancybox data-src="#room7" onmouseover='myHover(this);' onmouseout='myLeave("mainCanvas");' shape="rect" coords="20,282,298,447" style="outline:none;" target="_self"     />
-<area id="room8-area" alt="Room 8" title="Room 8" data-fancybox data-src="#room8" onmouseover='myHover(this);' onmouseout='myLeave("mainCanvas");' shape="rect" coords="24,465,375,631" style="outline:none;" target="_self"     />
-<area id="room9-area" alt="Room 9" title="Room 9" data-fancybox data-src="#room9" onmouseover='myHover(this);' onmouseout='myLeave("mainCanvas");' shape="rect" coords="394,421,654,579" style="outline:none;" target="_self"     />
+<map name="tloris_map">
+    <area alt="" title="Room 1" data-fancybox data-src="#room1" onmouseover='myHover(this);'
+          onclick="myInit('room1_img', 'rgba(0, 0, 0, 0.25)', 'room1_canvas')" onmouseout='myLeave("mainCanvas");'
+          href="http://www.image-maps.com/" shape="rect" coords="533,268,690,362" style="outline:none;" target="_self"/>
+    <area alt="Tabla 2" title="Tabla 2" data-fancybox data-src="#room2" onmouseover='myHover(this);'
+          onclick="myInit('room2_img', 'rgba(0, 0, 0, 0.25)', 'room2_canvas')" onmouseout='myLeave("mainCanvas");'
+          href="http://www.image-maps.com/" shape="rect" coords="700,268,912,369" style="outline:none;" target="_self"/>
+    <area alt="Room 3" title="Room 3" data-fancybox data-src="#room3" onmouseover='myHover(this);'
+          onclick="myInit('room3_img', 'rgba(0, 0, 0, 0.25)', 'room3_canvas')" onmouseout='myLeave("mainCanvas");'
+          href="http://www.image-maps.com/" shape="rect" coords="752,48,911,258" style="outline:none;" target="_self"/>
+    <area alt="Room 4" title="Room 4" data-fancybox data-src="#room4" onmouseover='myHover(this);'
+          onclick="myInit('room4_img', 'rgba(0, 0, 0, 0.25)', 'room4_canvas')" onmouseout='myLeave("mainCanvas");'
+          href="http://www.image-maps.com/" shape="rect" coords="656,54,742,205" style="outline:none;" target="_self"/>
+    <area alt="Room 5" title="Room 5" data-fancybox data-src="#room5" onmouseover='myHover(this);'
+          onclick="myInit('room5_img', 'rgba(0, 0, 0, 0.25)', 'room5_canvas')" onmouseout='myLeave("mainCanvas");'
+          href="http://www.image-maps.com/" shape="rect" coords="448,31,654,140" style="outline:none;" target="_self"/>
+    <area alt="Room 6" title="Room 6" data-fancybox data-src="#room6" onmouseover='myHover(this);'
+          onclick="myInit('room6_img', 'rgba(0, 0, 0, 0.25)', 'room6_canvas')" onmouseout='myLeave("mainCanvas");'
+          href="http://www.image-maps.com/" shape="rect" coords="99,32,448,139" style="outline:none;" target="_self"/>
+    <area alt="Room 7" title="Room 7" data-fancybox data-src="#room7" onmouseover='myHover(this);'
+          onclick="myInit('room7_img', 'rgba(0, 0, 0, 0.25)', 'room7_canvas')" onmouseout='myLeave("mainCanvas");'
+          href="http://www.image-maps.com/" shape="rect" coords="34,182,203,286" style="outline:none;" target="_self"/>
+    <area alt="Room 8" title="Room 8" data-fancybox data-src="#room8" onmouseover='myHover(this);'
+          onclick="myInit('room8_img', 'rgba(0, 0, 0, 0.25)', 'room8_canvas')" onmouseout='myLeave("mainCanvas");'
+          href="http://www.image-maps.com/" shape="rect" coords="34,293,248,395" style="outline:none;" target="_self"/>
+    <area alt="Room 9" title="Room 9" data-fancybox data-src="#room9" onmouseover='myHover(this);'
+          onclick="myInit('room9_img', 'rgba(0, 0, 0, 0.25)', 'room9_canvas')" onmouseout='myLeave("mainCanvas");'
+          href="http://www.image-maps.com/" shape="rect" coords="259,268,417,360" style="outline:none;" target="_self"/>
 
-			</map> 
 
-			<div class="valign">
-				<div class="align">
-					<img id="tloris-id" src="tloris.png" alt="image map example" usemap="#tloris_map"> 
+</map>
 
-					</div>
-					
-					<div style="display: none; text-align: center;" id="room1">
-						<map name="room1_map">
-								<area id="tabla1" alt="Tabla 1" title="Tabla 1" onmouseover='myHover(this);' onmouseout='myLeave("room1_canvas");' shape="poly" coords="438,146,544,89,541,144,438,203" style="outline:none;" target="_self"     />
-								<area id="proj_filma" alt="Projekcija filma" title="Projekcija filma" onmouseover='myHover(this);' onmouseout='myLeave("room1_canvas");' shape="poly" coords="187,318,350,391,350,481,187,409" style="outline:none;" target="_self"     />
-								<area id="tabla_2" alt="Tabla 2" title="Tabla 2" onmouseover='myHover(this);' onmouseout='myLeave("room1_canvas");' shape="poly" coords="680,240,784,183,784,239,681,298" style="outline:none;" target="_self"     />
-								<area id="napis_na_steni" alt="Napis na steni" title="Napis na steni" onmouseover='myHover(this);' onmouseout='myLeave("room1_canvas");' shape="poly" coords="940,492,1134,603,1134,666,940,555" style="outline:none;" target="_self"     />
-								<area id="tv_1" alt="Tv" title="Tv" onmouseover='myHover(this);' onmouseout='myLeave("room1_canvas");' shape="poly" coords="1158,408,1183,391,1212,409,1214,434,1183,449,1157,436" style="outline:none;" target="_self"     />
-								<area id="tv_2" alt="Tv 2" title="Tv 2" onmouseover='myHover(this);' onmouseout='myLeave("room1_canvas");' shape="poly" coords="788,910,814,893,840,909,840,934,812,949,785,934" style="outline:none;" target="_self"     />
-								<area id="vrata_1" alt="Vrata 1" title="Vrata 1" onmouseover='myHover(this);' onmouseout='myLeave("room1_canvas");' shape="poly" coords="307,763,414,825,409,1026,302,967" style="outline:none;" target="_self"     />
-								<area id="vrata_2" alt="Vrata 2" title="Vrata 2" onmouseover='myHover(this);' onmouseout='myLeave("room1_canvas");' shape="poly" coords="632,952,737,1012,730,1214,633,1158" style="outline:none;" target="_self"     />
-								<area id="vrata_3" alt="Vrata 3" title="Vrata 3" onmouseover='myHover(this);' onmouseout='myLeave("room1_canvas");' shape="poly" coords="1183,641,1280,695,1273,880,1180,833" style="outline:none;" target="_self"     />
-						</map>
-						<canvas id='room1_canvas'></canvas>
-						<img src="room1.png" style="max-width: 60%;" usemap="#room1_map" id="room1_img">
-					</div>
-					<div style="display: none; text-align: center;" id="room2">
-						<map name="room2_map">
-							<area id="tabla3" alt="Tabla 3" title="Tabla 3" onmouseover='myHover(this);' onmouseout='myLeave("room2_canvas");' shape="poly" coords="366,531,573,513,570,700,366,723" style="outline:none;" target="_self"     />
-							<area id="wizard" alt="Print 1 Wizard" title="Print 1 Wizard" onmouseover='myHover(this);' onmouseout='myLeave("room2_canvas");' shape="poly" coords="775,658,934,642,933,831,775,847" style="outline:none;" target="_self"     />
-							<area id="print2" alt="Print 2" title="Print 2" onmouseover='myHover(this);' onmouseout='myLeave("room2_canvas");' shape="poly" coords="321,753,478,742,478,925,320,946" style="outline:none;" target="_self"     />
-							<area id="print3" alt="Print 3" title="Print 3" onmouseover='myHover(this);' onmouseout='myLeave("room2_canvas");' shape="poly" coords="135,1111,258,1135,255,1327,132,1294" style="outline:none;" target="_self"     />
-							<area id="favit" alt="Favit" title="Favit" onmouseover='myHover(this);' onmouseout='myLeave("room2_canvas");' shape="poly" coords="57,1342,147,1369,142,1491,49,1462" style="outline:none;" target="_self"     />
-							<area id="tvVideo" alt="TV z videom "z vzhoda na zahod"" title="TV z videom z vzhoda na zahod" onmouseover='myHover(this);' onmouseout='myLeave("room2_canvas");' shape="poly" coords="1309,1612,1423,1606,1420,1722,1305,1740" style="outline:none;" target="_self"     />
-							<area id="tabla4" alt="Tabla 4" title="Tabla 4" onmouseover='myHover(this);' onmouseout='myLeave("room2_canvas");' shape="poly" coords="1818,1476,2025,1458,2023,1639,1813,1665" style="outline:none;" target="_self"     />
-							<area id="alphaThetaRitem" alt="Diaprojekcija: Alpha Theta ritem" title="Diaprojekcija: Alpha Theta ritem" onmouseover='myHover(this);' onmouseout='myLeave("room2_canvas");' shape="poly" coords="2235,1483,2350,1476,2352,1596,2230,1609" style="outline:none;" target="_self"     />
-							<area id="atr_3" alt="Alpha Theta Ritem #3" title="Alpha Theta Ritem #3" onmouseover='myHover(this);' onmouseout='myLeave("room2_canvas");' shape="poly" coords="1918,937,1951,945,1952,981,1920,975" style="outline:none;" target="_self"     />
-							<area id="atr_4" alt="Alpha Theta Ritem #4" title="Alpha Theta Ritem #4" onmouseover='myHover(this);' onmouseout='myLeave("room2_canvas");' shape="poly" coords="1961,947,1992,953,1993,991,1962,985" style="outline:none;" target="_self"     />
-							<area id="atr_5" alt="Alpha Theta Ritem #5" title="Alpha Theta Ritem #5" onmouseover='myHover(this);' onmouseout='myLeave("room2_canvas");' shape="poly" coords="2001,955,2033,962,2033,997,2001,991" style="outline:none;" target="_self"     />
-							<area id="atr_6" alt="Alpha Theta Ritem #6" title="Alpha Theta Ritem #6" onmouseover='myHover(this);' onmouseout='myLeave("room2_canvas");' shape="poly" coords="2043,965,2073,972,2076,1012,2043,1003" style="outline:none;" target="_self"     />
-							<area id="atr_7" alt="Alpha Theta Ritem #7" title="Alpha Theta Ritem #7" onmouseover='myHover(this);' onmouseout='myLeave("room2_canvas");' shape="poly" coords="2082,971,2117,980,2117,1017,2085,1008" style="outline:none;" target="_self"     />
-							<area id="atr_8" alt="Alpha Theta Ritem #8" title="Alpha Theta Ritem #8" onmouseover='myHover(this);' onmouseout='myLeave("room2_canvas");' shape="poly" coords="2127,982,2160,987,2161,1026,2126,1021" style="outline:none;" target="_self"     />
-							<area id="atr_9" alt="Alpha Theta Ritem #9" title="Alpha Theta Ritem #9" onmouseover='myHover(this);' onmouseout='myLeave("room2_canvas");' shape="poly" coords="2168,990,2202,998,2202,1036,2171,1025" style="outline:none;" target="_self"     />
-							<area id="atr_10" alt="Alpha Theta Ritem #10" title="Alpha Theta Ritem #10" onmouseover='myHover(this);' onmouseout='myLeave("room2_canvas");' shape="poly" coords="2210,1001,2241,1010,2243,1045,2211,1038" style="outline:none;" target="_self"     />
-							<area id="atr_1" alt="Alpha Theta Ritem #1" title="Alpha Theta Ritem #1" onmouseover='myHover(this);' onmouseout='myLeave("room2_canvas");' shape="poly" coords="1836,921,1870,928,1867,963,1835,956" style="outline:none;" target="_self"     />
-							<area id="atr_2" alt="Alpha Theta Ritem #2" title="Alpha Theta Ritem #2" onmouseover='myHover(this);' onmouseout='myLeave("room2_canvas");' shape="poly" coords="1877,930,1906,936,1910,973,1878,965" style="outline:none;" target="_self"     />
-							<area id="g_1" alt="Grafike 1" title="Grafike 1" onmouseover='myHover(this);' onmouseout='myLeave("room2_canvas");' shape="poly" coords="1733,1796,1769,1794,1773,1842,1732,1844" style="outline:none;" target="_self"     />
-							<area id="g_2" alt="Grafike 2" title="Grafike 2" onmouseover='myHover(this);' onmouseout='myLeave("room2_canvas");' shape="poly" coords="1790,1789,1830,1788,1828,1832,1792,1834" style="outline:none;" target="_self"     />
-							<area id="g_3" alt="Grafike 3" title="Grafike 3" onmouseover='myHover(this);' onmouseout='myLeave("room2_canvas");' shape="poly" coords="1846,1784,1880,1782,1882,1824,1841,1830" style="outline:none;" target="_self"     />
-							<area id="g_4" alt="Grafike 4" title="Grafike 4" onmouseover='myHover(this);' onmouseout='myLeave("room2_canvas");' shape="poly" coords="1901,1776,1942,1772,1941,1818,1900,1822" style="outline:none;" target="_self"     />
-						</map>
-						<canvas id='room2_canvas'></canvas>
-						<img src="room2.png" style="max-width: 50%;" usemap="#room2_map" id="room2_img">
-					</div>
-					</div>
-					<div style="display: none; text-align: center;" id="room3">
-						<img src="room2.png" style="max-width: 50%;">
-					</div>
-					<div style="display: none; text-align: center;" id="room4">
-						<img src="room2.png" style="max-width: 50%;">
-					</div>
-					<div style="display: none; text-align: center;" id="room5">
-						<img src="room2.png" style="max-width: 50%;">
-					</div>
-					<div style="display: none; text-align: center;" id="room6">
-						<img src="room2.png" style="max-width: 50%;">
-					</div>
-					<div style="display: none; text-align: center;" id="room7">
-						<img src="room2.png" style="max-width: 50%;">
-					</div>
-					<div style="display: none; text-align: center;" id="room8">
-						<img src="room2.png" style="max-width: 50%;">
-					</div>
-					<div style="display: none; text-align: center;" id="room9">
-						<img src="room2.png" style="max-width: 50%;">
-					</div>
-				</div>
-				<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-				<script type="text/javascript" src="image-map-resizer.min.js"></script>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
-				<script type="text/javascript" src="main.js"></script>
-			</body>
-		</html>
+<div class="valign">
+    <div class="align">
+        <img id="tloris-id" src="static/tloris.png" alt="image map example" usemap="#tloris_map">
+
+    </div>
+
+
+    <div data-include="room1/tloris.html"></div>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="vendor/image-map-resizer.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script>
+    $(function () {
+        var includes = $('[data-include]');
+        jQuery.each(includes, function () {
+            var file = $(this).data('include');
+            $(this).load(file);
+        });
+    });
+</script>
+</body>
+</html>

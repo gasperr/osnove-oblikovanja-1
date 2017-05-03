@@ -1,0 +1,71 @@
+<div id="room1" style="text-align: center" class="hidden">
+    <map name="room1_map">
+        <area id="tabla1" alt="Tabla 1" title="Tabla 1" onmouseover='myHover(this);'
+              onmouseout='myLeave("room1_canvas");' shape="poly" coords="438,146,544,89,541,144,438,203"
+              style="outline:none;" target="_self" data-fancybox data-src="#table1"/>
+
+        <area id="proj_filma" alt="Projekcija filma" title="Projekcija filma" onmouseover='myHover(this);'
+              onmouseout='myLeave("room1_canvas");' shape="poly" coords="187,318,350,391,350,481,187,409"
+              style="outline:none;" target="_self" data-fancybox data-src="#projFilma"/>
+
+        <area id="tabla_2" alt="Tabla 2" title="Tabla 2" onmouseover='myHover(this);'
+              onmouseout='myLeave("room1_canvas");' shape="poly" coords="680,240,784,183,784,239,681,298"
+              style="outline:none;" target="_self" data-fancybox data-src="#table2"/>
+
+        <area id="napis_na_steni" alt="napis na steni" title="Napis na steni" onmouseover='myHover(this);'
+              onmouseout='myLeave("room1_canvas");' shape="poly"
+              coords="938,484,1121,589,1121,604,1066,581,1068,589,1133,623,1133,639,1084,616,1084,628,1201,690,1199,708,1107,659,1105,669,996,608,999,582,965,561,966,533,935,510"
+              style="outline:none;" target="_self" data-fancybox data-src="#napisNaSteni"/>
+
+
+        <area id="rg" alt="rg" title="RG" href="http://www.image-maps.com/" onmouseover='myHover(this);'
+              onmouseout='myLeave("room1_canvas");' shape="poly"
+              coords="1139,459,1129,456,1132,400,1170,391,1226,411,1228,466,1219,470,1181,482,1138,467"
+              style="outline:none;" target="_self" data-fancybox data-src="#rgPopup"/>
+
+        <area id="belo_mleko" alt="belo_mleko" title="belo_mleko" href="http://www.image-maps.com/" shape="poly"
+              onmouseover='myHover(this);' onmouseout='myLeave("room1_canvas");'
+              coords="753,955,762,905,818,879,859,899,847,949,839,959,802,979" style="outline:none;"
+              target="_self"/>
+
+
+        <area id="vrata_1" alt="Vrata 1" title="Vrata 1" onmouseover='myHover(this);'
+              onmouseout='myLeave("room1_canvas");' shape="poly" coords="307,763,414,825,409,1026,302,967"
+              style="outline:none;" target="_self"/>
+
+        <area id="vrata_2" alt="Vrata 2" title="Vrata 2" onmouseover='myHover(this);'
+              onmouseout='myLeave("room1_canvas");' shape="poly" coords="632,952,737,1012,730,1214,633,1158"
+              style="outline:none;" target="_self"/>
+
+        <area id="vrata_3" alt="Vrata 3" title="Vrata 3" onmouseover='myHover(this);'
+              onmouseout='myLeave("room1_canvas");' shape="poly" coords="1183,641,1280,695,1273,880,1180,833"
+              style="outline:none;" target="_self"/>
+    </map>
+    <canvas id='room1_canvas'></canvas>
+    <img src="static/room1.png" style="max-width: 60%;" usemap="#room1_map" id="room1_img">
+</div>
+
+<div id="table1" class="hidden">
+    <img src="static/SOBA_1/tabla_1.PNG" alt="Tabla 1">
+</div>
+<div id="table2" class="hidden">
+    <img src="static/SOBA_1/tabla_2.PNG" alt="Tabla 2">
+</div>
+<div id="projFilma" class="hidden">
+    <iframe width="728" height="410" src="https://www.youtube.com/embed/sqqZc5bycKM" frameborder="0"
+            allowfullscreen></iframe>
+</div>
+<div id="napisNaSteni" class="hidden">
+    <div class="napis"><p class="first">“Srečanje drug nasproti drugemu z dotikom dlani
+        z drevesom na sredi v parku Tivoli.”</p>
+        <p class="second">“Srečanje drug nasproti drugemu brez dotika
+            z drevesom na sredi v parku ...”</p>
+        <p class="third">“Srečanje drug nasproti drugemu z dotikom podplatov
+            z drevesom na sredini Tivoli.”</p></div>
+</div>
+<div id="rgPopup" class="hidden">
+    <video width="728px" height="410px" autobuffer="autobuffer" loop="loop" controls="controls">
+        <source src='static/SOBA_1/rg.mp4' type='video/mp4'>
+        Not supported..
+    </video>
+</div>
