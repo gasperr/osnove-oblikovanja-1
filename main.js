@@ -103,7 +103,11 @@ function myInit(id, hoverColor, canvasId)
 		
 		$(".fancybox-close-small").on("click", function(){
 			myInit('tloris-id', 'rgba(0,0,0,.2)', 'mainCanvas');
-		})
+		});
+
+        $(".room-change").on("click", function(){
+            parent.$.fancybox.close();
+        });
 	}, 500);
 	
 	

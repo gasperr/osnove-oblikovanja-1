@@ -1,7 +1,7 @@
 <div id="room1" style="text-align: center" class="hidden">
     <map name="room1_map">
         <area id="tabla1" alt="Tabla 1" title="Tabla 1" onmouseover='myHover(this);'
-              onmouseout='myLeave("room1_canvas");' shape="poly" coords="438,146,544,89,541,144,438,203"
+              onmouseout='myLeave("room1_canvas");' shape="poly" coords="439,150,541,104,541,158,440,203"
               style="outline:none;" target="_self" data-fancybox data-src="#table1"/>
 
         <area id="proj_filma" alt="Projekcija filma" title="Projekcija filma" onmouseover='myHover(this);'
@@ -9,7 +9,7 @@
               style="outline:none;" target="_self" data-fancybox data-src="#projFilma"/>
 
         <area id="tabla_2" alt="Tabla 2" title="Tabla 2" onmouseover='myHover(this);'
-              onmouseout='myLeave("room1_canvas");' shape="poly" coords="680,240,784,183,784,239,681,298"
+              onmouseout='myLeave("room1_canvas");' shape="poly" coords="677,252,784,194,786,240,678,300"
               style="outline:none;" target="_self" data-fancybox data-src="#table2"/>
 
         <area id="napis_na_steni" alt="napis na steni" title="Napis na steni" onmouseover='myHover(this);'
@@ -28,21 +28,27 @@
               coords="753,955,762,905,818,879,859,899,847,949,839,959,802,979" style="outline:none;"
               target="_self" data-fancybox data-src="#beloMleko"/>
 
+        <area id="drevo" alt="drevo" title="drevo" shape="poly"
+              onmouseover='myHover(this);' onmouseout='myLeave("room1_canvas");'
+              coords="840,848,838,805,832,805,822,807,814,805,806,802,810,795,804,796,798,794,803,786,804,778,804,770,799,771,794,768,785,772,783,764,786,760,790,756,793,748,803,751,811,746,807,739,800,729,807,727,817,734,827,728,834,725,843,719,844,709,855,718,853,732,862,731,872,734,869,748,872,759,879,768,888,757,899,768,891,784,884,782,884,793,880,798,872,800,869,808,862,807,857,816,855,809,852,803,846,803,844,844" style="outline:none;"
+              target="_self" data-fancybox data-src="#drevoL"/>
 
-        <area id="vrata_1" alt="Soba 9" title="Soba 9" onmouseover='myHover(this);' onclick="myInit('room9_img', 'rgba(0, 0, 0, 0.25)', 'room9_canvas')"
+
+
+        <area id="vrata_1" class="room-change" alt="Soba 9" title="Soba 9" onmouseover='myHover(this);' onclick="myInit('room9_img', 'rgba(0, 0, 0, 0.25)', 'room9_canvas')"
               onmouseout='myLeave("room1_canvas");' shape="poly" coords="307,763,414,825,409,1026,302,967"
               style="outline:none;" target="_self" data-fancybox data-src="#room9"/>
 
-        <area id="vrata_2" alt="Soba 9" title="Soba 9" onmouseover='myHover(this);' onclick="myInit('room9_img', 'rgba(0, 0, 0, 0.25)', 'room9_canvas')"
+        <area id="vrata_2" class="room-change" alt="Soba 9" title="Soba 9" onmouseover='myHover(this);' onclick="myInit('room9_img', 'rgba(0, 0, 0, 0.25)', 'room9_canvas')"
               onmouseout='myLeave("room1_canvas");' shape="poly" coords="632,952,737,1012,730,1214,633,1158"
               style="outline:none;" target="_self" data-fancybox data-src="#room9"/>
 
-        <area id="vrata_3" alt="Soba 2" title="Soba 2" onmouseover='myHover(this);' onclick="myInit('room2_img', 'rgba(0, 0, 0, 0.25)', 'room2_canvas')"
+        <area id="vrata_3" class="room-change" alt="Soba 2" title="Soba 2" onmouseover='myHover(this);' onclick="myInit('room2_img', 'rgba(0, 0, 0, 0.25)', 'room2_canvas')"
               onmouseout='myLeave("room1_canvas");' shape="poly" coords="1183,641,1280,695,1273,880,1180,833"
               style="outline:none;" target="_self" data-fancybox data-src="#room2"/>
     </map>
     <canvas id='room1_canvas'></canvas>
-    <img src="static/room1_new.png" style="max-width: 60%;" usemap="#room1_map" id="room1_img">
+    <img src="static/room1.png" style="max-width: 60%;" usemap="#room1_map" id="room1_img">
 </div>
 
 <div id="table1" class="hidden">
@@ -70,6 +76,12 @@
     </video>
 </div>
 <div id="beloMleko" class="hidden">
+    <video width="728px" height="410px" autobuffer="autobuffer" loop="loop" controls="controls">
+        <source src='static/SOBA_1/belo_mleko.mp4' type='video/mp4'>
+        Not supported..
+    </video>
+</div>
+<div id="drevoL" class="hidden">
     <video width="728px" height="410px" autobuffer="autobuffer" loop="loop" controls="controls">
         <source src='static/SOBA_1/belo_mleko.mp4' type='video/mp4'>
         Not supported..
