@@ -11,6 +11,10 @@
 <canvas id='mainCanvas'></canvas>     <!-- gets re-positioned in myInit(); -->
 
 <map name="tloris_map">
+    <area alt="" title="Room 0" data-fancybox data-src="#room0" onmouseover='myHover(this);'
+          onclick="myInit('room0_img', 'rgba(0, 0, 0, 0.25)', 'room0_canvas')" onmouseout='myLeave("mainCanvas");'
+          href="http://www.image-maps.com/" shape="rect" coords="432,218,523,364" style="outline:none;" target="_self"/>
+
     <area alt="" title="Room 1" data-fancybox data-src="#room1" onmouseover='myHover(this);'
           onclick="myInit('room1_img', 'rgba(0, 0, 0, 0.25)', 'room1_canvas')" onmouseout='myLeave("mainCanvas");'
           href="http://www.image-maps.com/" shape="rect" coords="533,268,690,362" style="outline:none;" target="_self"/>
@@ -39,12 +43,16 @@
 
 <div class="valign">
     <h1>Prostor, vržen iz tira</h1>
+    <h2>Srečo Dragan</h2>
+    <h3>22. december 2016 - 05. marec 2017</h3>
+    <h3>Muzej sodobne umetnosti Metelkova, +MSUM</h3>
     <div class="align">
         <img id="tloris-id" src="static/tloris.png" alt="image map example" usemap="#tloris_map">
 
     </div>
 
 
+    <div data-include="room0/tloris.html"></div>
     <div data-include="room1/tloris.html"></div>
     <div data-include="room2/tloris.html"></div>
     <div data-include="room34/tloris.html"></div>

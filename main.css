@@ -9,7 +9,11 @@
 .valign {
     text-align: center;
     display: table-cell;
-    vertical-align: middle;
+    /*vertical-align: middle;*/
+}
+.align img {
+    /*padding-top: 90px;*/
+    width: 70%;
 }
 
 .align {
@@ -35,4 +39,16 @@ canvas {
 }
 .napis .third {
     margin-left: 100px;
+}
+
+.favit_diaprojekcija img {
+    max-width: 50%;
+    margin: auto;
+}
+.favit_diaprojekcija {
+    text-align: center;
+}
+.favit_diaprojekcija .w3-button {
+    text-align: center;
+    margin: auto;
 }
