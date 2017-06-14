@@ -1,0 +1,4 @@
+Ker je projekt prevelik zaradi vsega gradiva, ki ga vsebuja (cca 1GB), prilagava link do spletne strani in do github repozitorija, kjer je tudi vidno, kdaj so bile zadnje spremembe (pred rokom oddaje).
+
+Spletna stran: https://gasperr.github.io/osnove-oblikovanja-1/index.html
+GitHub: https://github.com/gasperr/osnove-oblikovanja-1/tree/gh-pages
