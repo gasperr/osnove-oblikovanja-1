@@ -179,8 +179,18 @@
 <div id="nprojekcija2_" class="hidden">
     <img src="static/SOBA_5_6/vtp2.JPG" alt="Grafika 3">
 </div>
-<div id="tabla1_" class="hidden">
-    <img src="static/SOBA_5_6/interaktivna talba 1 cut.JPG" alt="Grafika 3">
+<div id="tabla1_" class="hidden pp" style="text-align: center">
+    <img src="static/SOBA_5_6/6_41-ljudje.jpg" class="mySlides563" alt="Grafika 3" style="max-width: 50%">
+
+    <div class="mySlides563">
+        <video width="728px" height="410px" autobuffer="autobuffer" loop="loop" controls="controls">
+            <source src='static/SOBA_5_6/11-Manca-Bizjak-IOI_KonceptneTable_2016_Bizjak.mp4' type='video/mp4'>
+            Not supported..
+        </video>
+    </div>
+
+    <button class="w3-button w3-display-left" onclick="plusDivs3(-1)">&#10094;</button>
+    <button class="w3-button w3-display-right" onclick="plusDivs3(+1)">&#10095;</button>
 </div>
 <div id="tabla9_" class="hidden">
     <img src="static/SOBA_5_6/tabla 9 cut.JPG" alt="Grafika 3">
@@ -243,6 +253,24 @@
     function showDivs2(n) {
         var i;
         var x = document.getElementsByClassName("mySlides562");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length} ;
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+    }
+
+    var slideIndex3 = 1;
+    showDivs3(slideIndex3);
+
+    function plusDivs3(n) {
+        showDivs3(slideIndex += n);
+    }
+
+    function showDivs3(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides563");
         if (n > x.length) {slideIndex = 1}
         if (n < 1) {slideIndex = x.length} ;
         for (i = 0; i < x.length; i++) {
