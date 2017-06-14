@@ -20,7 +20,7 @@
               data-fancybox data-src="#rotas_"
               coords="1213.0000610351562,965,1307.0000610351562,912,1309.0000610351562,1006,1213.0000610351562,1058"
               style="outline:none;" target="_self"/>
-        <area onmouseover='myHover(this);' onmouseout='myLeave("room56_canvas");' title="RTV intervju" shape="poly"
+        <area onmouseover='myHover(this);' onmouseout='myLeave("room56_canvas");' title="Analiza hoje" shape="poly"
               data-fancybox data-src="#rtv_"
               coords="1334.0000610351562,938,1376.0000610351562,916,1377.0000610351562,952,1335.0000610351562,973"
               style="outline:none;" target="_self"/>
@@ -129,8 +129,19 @@
 <div id="tabla6_" class="hidden">
     <img src="static/SOBA_5_6/tabla 6 cut.JPG" alt="Plakat 2">
 </div>
-<div id="metaforicne_" class="hidden">
-    <img src="static/SOBA_5_6/metaforične razširitve cut.JPG" alt="Plakat 3">
+<div id="metaforicne_" class="hidden pp"  style="text-align: center">
+    <img src="static/SOBA_5_6/6_34.jpg" class="mySlides562" alt="Plakat 3" style="max-width: 50%">
+
+    <div class="mySlides562">
+        <video width="728px" height="410px" autobuffer="autobuffer" loop="loop" controls="controls">
+            <source src='static/SOBA_5_6/razsiritveEdited_2.mp4' type='video/mp4'>
+            Not supported..
+        </video>
+    </div>
+
+
+    <button class="w3-button w3-display-left" onclick="plusDivs2(-1)">&#10094;</button>
+    <button class="w3-button w3-display-right" onclick="plusDivs2(+1)">&#10095;</button>
 </div>
 <div id="tabla7_" class="hidden">
     <img src="static/SOBA_5_6/tabla 7 cut.JPG" alt="Imagine no door">
@@ -142,7 +153,10 @@
     </video>
 </div>
 <div id="rtv_" class="hidden">
-    <img src="static/SOBA_5_6/rtv intervju cut.JPG" alt="Tabla 4">
+    <video width="728px" height="410px" autobuffer="autobuffer" loop="loop" controls="controls">
+        <source src='static/SOBA_5_6/25_point_tracking_xvid.mp4' type='video/mp4'>
+        Not supported..
+    </video>
 </div>
 <div id="nmatrica1_" class="hidden">
     <img src="static/SOBA_5_6/matrica 1.JPG" alt="Videowall">
@@ -208,6 +222,24 @@
     function showDivs(n) {
         var i;
         var x = document.getElementsByClassName("mySlides56");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length} ;
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+    }
+
+    var slideIndex2 = 1;
+    showDivs2(slideIndex2);
+
+    function plusDivs2(n) {
+        showDivs2(slideIndex += n);
+    }
+
+    function showDivs2(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides562");
         if (n > x.length) {slideIndex = 1}
         if (n < 1) {slideIndex = x.length} ;
         for (i = 0; i < x.length; i++) {

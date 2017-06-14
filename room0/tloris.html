@@ -4,6 +4,15 @@
               data-fancybox data-src="#tapeta_" alt="" title="" shape="poly"
               coords="410,200,645,66,650,262,415,394" style="outline:none;" target="_self"/>
 
+        <area alt="" href="http://www.image-maps.com/" shape="poly" coords="147,648,291,724,287,936,144,849"
+              style="outline:none;" target="_self" class="room-change" title="Soba 9" onmouseover='myHover(this);'
+              onclick="myInit('room9_img', 'rgba(0, 0, 0, 0.25)', 'room9_canvas')"
+              onmouseout='myLeave("room0_canvas");' data-fancybox data-src="#room9"/>
+        <area alt="" title="Soba 1" href="http://www.image-maps.com/" shape="poly" coords="733,311,874,389,870,596,736,536"
+              style="outline:none;" target="_self" onmouseover='myHover(this);'
+              onclick="myInit('room1_img', 'rgba(0, 0, 0, 0.25)', 'room1_canvas')"
+              onmouseout='myLeave("room0_canvas");' data-fancybox data-src="#room1"/>
+
 
     </map>
     <canvas id='room0_canvas'></canvas>
@@ -11,5 +20,6 @@
 </div>
 
 <div id="tapeta_" class="hidden">
-    <img src="static/SOBA_0/Capture.PNG" alt="Print 3">
+    <img class="mySlides0" src="static/SOBA_0/Capture.PNG">
+    <img class="mySlides0" src="static/SOBA_0/Capture_2.PNG" style="max-width: 45%">
 </div>
