@@ -100,7 +100,8 @@
     </video>
 </div>
 <div id="lcdVideo_" class="hidden">
-    <!--<img src="static/SOBA_9/tabla_2.PNG" alt="Tabla 2">-->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/eBP6zZimNJw" frameborder="0"
+            allowfullscreen></iframe>
 </div>
 
 <script>
@@ -116,11 +117,16 @@
     function showDivs9(n) {
         var i;
         var x = document.getElementsByClassName("mySlides9");
-        if (n > x.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = x.length} ;
+        if (n > x.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = x.length
+        }
+        ;
         for (i = 0; i < x.length; i++) {
             x[i].style.display = "none";
         }
-        x[slideIndex-1].style.display = "block";
+        x[slideIndex - 1].style.display = "block";
     }
 </script>
