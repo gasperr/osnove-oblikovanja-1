@@ -22,12 +22,21 @@
               onmouseout='myLeave("room9_canvas");' onmouseover='myHover(this);'
               coords="335,902,401,868,403,911,336,949" style="outline:none;" target="_self"/>
 
-        <area onmouseout='myLeave("room9_canvas");' class="room-change" onmouseover='myHover(this);' title="Soba 7 in 8" shape="poly"
+        <area onmouseout='myLeave("room9_canvas");' class="room-change" onmouseover='myHover(this);' title="Soba 7 in 8"
+              shape="poly"
               onclick="myInit('room78_img', 'rgba(0, 0, 0, 0.25)', 'room78_canvas')" data-fancybox data-src="#room78"
               coords="557,642,698,725,696,925,558,843" style="outline:none;" target="_self"/>
 
-        <area onmouseout='myLeave("room9_canvas");' class="room-change" onmouseover='myHover(this);' title="Izhod" shape="poly"
+        <area onmouseout='myLeave("room9_canvas");' class="room-change" onmouseover='myHover(this);' title="Izhod"
+              shape="poly"
               coords="1152,313,1288,387,1273,577,1151,511" style="outline:none;" target="_self" href="index.html"/>
+
+
+        <area shape="rect" data-fancybox data-src="#robot_" title="Robot Učitelj"
+              onmouseout='myLeave("room9_canvas");' onmouseover='myHover(this);'
+              coords="829,332,886,412"
+              style="outline:none;" target="_self"/>
+
 
     </map>
     <canvas id='room9_canvas'></canvas>
@@ -35,9 +44,33 @@
     <img src="static/room9.png" style="max-width: 80%;" usemap="#room9_map" id="room9_img">
 </div>
 
-<div id="interaktivna_" class="hidden">
-    <img src="static/SOBA_9/interaktivna tabla 2.JPG" alt="Tabla 1">
-    <h1 data-fancybox data-src="#rgPopup"><a href="#">Video</a> </h1>
+<div id="interaktivna_" class="hidden pp" style="text-align: center">
+
+    <img src="static/SOBA_9/pp/Slide1.PNG" class="mySlides9" alt="Grafika 3">
+    <img src="static/SOBA_9/pp/Slide2.PNG" class="mySlides9" alt="Grafika 3" style="max-width: 50%">
+    <img src="static/SOBA_9/pp/Slide3.PNG" class="mySlides9" alt="Grafika 3" style="max-width: 50%">
+    <img src="static/SOBA_9/pp/Slide4.PNG" class="mySlides9" alt="Grafika 3" style="max-width: 50%">
+    <img src="static/SOBA_9/pp/Slide5.PNG" class="mySlides9" alt="Grafika 3" style="max-width: 50%">
+    <img src="static/SOBA_9/pp/Slide6.PNG" class="mySlides9" alt="Grafika 3" style="max-width: 50%">
+    <img src="static/SOBA_9/pp/Slide7.PNG" class="mySlides9" alt="Grafika 3" style="max-width: 50%">
+    <img src="static/SOBA_9/pp/Slide8.PNG" class="mySlides9" alt="Grafika 3" style="max-width: 50%">
+    <img src="static/SOBA_9/pp/Slide9.PNG" class="mySlides9" alt="Grafika 3" style="max-width: 50%">
+    <img src="static/SOBA_9/pp/Slide10.PNG" class="mySlides9" alt="Grafika 3" style="max-width: 50%">
+    <img src="static/SOBA_9/pp/Slide11.PNG" class="mySlides9" alt="Grafika 3" style="max-width: 50%">
+    <img src="static/SOBA_9/pp/Slide12.PNG" class="mySlides9" alt="Grafika 3" style="max-width: 50%">
+    <img src="static/SOBA_9/pp/Slide13.PNG" class="mySlides9" alt="Grafika 3" style="max-width: 50%">
+    <img src="static/SOBA_9/pp/Slide14.PNG" class="mySlides9" alt="Grafika 3" style="max-width: 50%">
+    <img src="static/SOBA_9/pp/Slide15.PNG" class="mySlides9" alt="Grafika 3" style="max-width: 50%">
+    <img src="static/SOBA_9/pp/Slide16.PNG" class="mySlides9" alt="Grafika 3" style="max-width: 50%">
+    <img src="static/SOBA_9/pp/Slide17.PNG" class="mySlides9" alt="Grafika 3" style="max-width: 50%">
+    <img src="static/SOBA_9/pp/Slide18.PNG" class="mySlides9" alt="Grafika 3" style="max-width: 50%">
+    <img src="static/SOBA_9/pp/Slide19.PNG" class="mySlides9" alt="Grafika 3" style="max-width: 50%">
+    <img src="static/SOBA_9/pp/Slide20.PNG" class="mySlides9" alt="Grafika 3" style="max-width: 50%">
+    <img src="static/SOBA_9/pp/Slide21.PNG" class="mySlides9" alt="Grafika 3" style="max-width: 50%">
+
+
+    <button class="w3-button w3-display-left" onclick="plusDivs9(-1)">&#10094;</button>
+    <button class="w3-button w3-display-right" onclick="plusDivs9(+1)">&#10095;</button>
 </div>
 <div id="sonifikacija2_" class="hidden">
     <video width="640px" height="480px" autobuffer="autobuffer" loop="loop" controls="controls">
@@ -60,6 +93,34 @@
 <div id="sonifikacijaPodobe3_" class="hidden">
     <img src="static/SOBA_9/sonfikacija podobe 3.JPG" alt="Tabla 2">
 </div>
+<div id="robot_" class="hidden">
+    <video width="640px" height="480px" autobuffer="autobuffer" loop="loop" controls="controls">
+        <source src='static/SOBA_9/Robot Ucitelj.mp4' type='video/mp4'>
+        Not supported..
+    </video>
+</div>
 <div id="lcdVideo_" class="hidden">
     <!--<img src="static/SOBA_9/tabla_2.PNG" alt="Tabla 2">-->
 </div>
+
+<script>
+
+
+    var slideIndex9 = 1;
+    showDivs9(slideIndex3);
+
+    function plusDivs9(n) {
+        showDivs9(slideIndex += n);
+    }
+
+    function showDivs9(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides9");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length} ;
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+    }
+</script>
