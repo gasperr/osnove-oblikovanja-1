@@ -41,14 +41,14 @@ canvas {
     margin-left: 100px;
 }
 
-.favit_diaprojekcija img {
+.favit_diaprojekcija img, .pp img {
     max-width: 50%;
     margin: auto;
 }
-.favit_diaprojekcija {
+.favit_diaprojekcija, .pp {
     text-align: center;
 }
-.favit_diaprojekcija .w3-button {
+.pp .w3-button {
     text-align: center;
     margin: auto;
 }

@@ -89,19 +89,26 @@
               style="outline:none;" target="_self"/>
 
 
-        <area alt="" class="room-change" title="Soba 7 in 8" onmouseover='myHover(this);' onmouseout='myLeave("room56_canvas");'
+        <area alt="" class="room-change" title="Soba 7 in 8" onmouseover='myHover(this);'
+              onmouseout='myLeave("room56_canvas");'
               shape="poly" data-fancybox data-src="#room78"
               coords="1157,447,1248,393,1250,590,1155,646" style="outline:none;" target="_self"
               onclick="myInit('room78_img', 'rgba(0, 0, 0, 0.25)', 'room78_canvas')"/>
 
-        <area alt="" class="room-change" title="Soba 3 in 4" onmouseover='myHover(this);' onmouseout='myLeave("room56_canvas");'
+        <area alt="" class="room-change" title="Soba 3 in 4" onmouseover='myHover(this);'
+              onmouseout='myLeave("room56_canvas");'
               shape="poly" data-fancybox data-src="#room3"
               coords="358,925,456,981,448,1188,360,1135" style="outline:none;" target="_self"
               onclick="myInit('room3_img', 'rgba(0, 0, 0, 0.25)', 'room3_canvas')"/>
 
+        <area onmouseover='myHover(this);' onmouseout='myLeave("room56_canvas");' alt="" title="Napis na steni" shape="poly"
+              data-fancybox data-src="#napisNaSteni_"
+              coords="508,1156,509,1133,553,1154,545,1176" style="outline:none;" target="_self"/>
+
+
     </map>
     <canvas id='room56_canvas'></canvas>
-    <img src="static/room56.png" style="max-width: 75%;" usemap="#room56_map" id="room56_img">
+    <img src="static/room56_n.png" style="max-width: 75%;" usemap="#room56_map" id="room56_img">
 </div>
 
 <div id="madez_" class="hidden">
@@ -110,8 +117,14 @@
         Not supported..
     </video>
 </div>
-<div id="canum_" class="hidden">
-    <img src="static/SOBA_5_6/opuscanum cut.JPG" alt="Plakat 1">
+<div id="canum_" class="hidden pp"  style="text-align: center">
+
+    <img class="mySlides56" src="static/SOBA_5_6/opuscanum cut.JPG" style="max-width: 65%">
+    <img class="mySlides56" src="static/SOBA_5_6/5_29-ljudje.jpg" style="max-width: 65%">
+    <img class="mySlides56" src="static/SOBA_5_6/5_29-pol.jpg" style="max-width: 65%">
+
+    <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
 </div>
 <div id="tabla6_" class="hidden">
     <img src="static/SOBA_5_6/tabla 6 cut.JPG" alt="Plakat 2">
@@ -173,6 +186,9 @@
 <div id="tabla5_" class="hidden">
     <img src="static/SOBA_5_6/tabla 5 cut.JPG" alt="Grafika 3">
 </div>
+<div id="napisNaSteni_" class="hidden">
+    <img src="static/SOBA_5_6/napis_nad_tv.PNG" alt="Grafika 3">
+</div>
 <div id="arheus_" class="hidden">
     <video width="728px" height="410px" autobuffer="autobuffer" loop="loop" controls="controls">
         <source src='static/SOBA_5_6/78-6_arheus(dragan).mp4' type='video/mp4'>
@@ -181,5 +197,22 @@
 </div>
 
 
-<area  alt="" title="" href="http://www.image-maps.com/" shape="poly" coords="677,252,784,194,786,240,678,300" style="outline:none;" target="_self"     />
-<area  alt="" title="" href="http://www.image-maps.com/" shape="poly" coords="439,150,541,104,541,158,440,203" style="outline:none;" target="_self"     />
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides56");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length} ;
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+    }
+</script>
